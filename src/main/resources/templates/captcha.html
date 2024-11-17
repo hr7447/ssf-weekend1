@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Login</title>
+</head>
+
+<body>
+
+    <form th:action="@{/captcha-login}" th:object="${loginForm}" method="post">
+        <div>
+            <input type="text" th:field="*{username}" placeholder="Name" />
+        </div>
+        <div>
+            <input type="password" th:field="*{password}" placeholder="Password" />
+        </div>
+        <div>
+            <p>Please type in the word VISA.</p>
+            <input type="text" th:field="*{captcha}" placeholder="CAPTCHA" />
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+
+</html>
